@@ -2,14 +2,15 @@
   "Routes": [
     // Authentication Web API
     {
-      "UpstreamPathTemplate": "/oauth/token",
+      "UpstreamPathTemplate": "/auth/jwt/login",
       "UpstreamHttpMethod": [ "Post" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "AuthenticationWebApi",
           "Port": 5002
         }
+
       ],
       "DownstreamPathTemplate": "/api/Account"
     },
@@ -21,7 +22,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "customerwebapi",
-          "Port": 80
+          "Port": 5003
         }
       ],
       "DownstreamPathTemplate": "/api/Customer"
@@ -33,7 +34,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "customerwebapi",
-          "Port": 80
+          "Port": 5003
         }
       ],
       "DownstreamPathTemplate": "/api/Customer/{customerId}"
@@ -47,7 +48,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "productwebapi",
-          "Port": 80
+          "Port": 5004
         }
       ],
       "DownstreamPathTemplate": "/api/Product",
@@ -66,7 +67,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "productwebapi",
-          "Port": 80
+          "Port": 5004
         }
       ],
       "DownstreamPathTemplate": "/api/Product/{productId}"
