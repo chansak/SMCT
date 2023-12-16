@@ -11,7 +11,7 @@ namespace JwtAuthenticationManager
     {
         public static void AddCustomJwtAuthentication(this IServiceCollection services)
         {
-            //Combining cookie and JWT bearer authentication for supporting both SPA and APIs
+            //Combining cookie and JWT bearer authentication for supporting both cookie-based authentication and token based authentication (modern)
             services.AddAuthentication(options =>
             {
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
