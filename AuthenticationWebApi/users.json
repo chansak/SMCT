@@ -1,0 +1,14 @@
+{
+  "Users": [
+    {
+      "IdentityId": "11333355555577777777",
+      "OTP": "12345",
+      "Role": "Administrator"
+    },
+    {
+      "IdentityId": "1240700003882",
+      "OTP": "12345",
+      "Role": "User"
+    }
+  ]
+}
