@@ -7,7 +7,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "AuthenticationWebApi",
+          "Host": "localhost",
           "Port": 5002
         }
 
@@ -52,13 +52,13 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Product",
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      },
-      "RouteClaimsRequirement": {
-        "Role": "Administrator"
-      }
+      //"AuthenticationOptions": {
+        //"AuthenticationProviderKey": "Bearer",
+        //"AllowedScopes": []
+      //},
+      //"RouteClaimsRequirement": {
+      //  "Role": "Administrator"
+      //}
     },
     {
       "UpstreamPathTemplate": "/api/Product/{productId}",
